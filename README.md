@@ -1,7 +1,5 @@
 # mugpage
 
-<https://mug.outv.im>
-
 ## License
 
 | Type of file              | License                                                                                                                      |
