@@ -41,7 +41,7 @@ export default class Infobox extends Vue {
   @Prop()
   title!: string
 
-  @Prop({ default: false })
+  @Prop({ default: () => false })
   hidden!: boolean
 
   @Prop()
