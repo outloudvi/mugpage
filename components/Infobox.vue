@@ -33,5 +33,6 @@ export default class Infobox extends Vue {
   float: right;
   clear: right;
   width: 23vw;
+  margin-left: 10px;
 }
 </style>
