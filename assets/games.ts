@@ -5,6 +5,10 @@ const games: GameEntry[] = [
     slug: 'arcaea',
     name: 'Arcaea',
   },
+  {
+    slug: 'cgss',
+    name: '偶像大师灰姑娘女孩 星光舞台',
+  },
 ]
 
 export default games
