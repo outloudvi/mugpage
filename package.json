@@ -38,6 +38,7 @@
     "prettier": "^2.2.1",
     "rehype-accessible-emojis": "^0.3.2",
     "remark-emoji": "^2.1.0",
+    "remark-gfm": "^1.0.0",
     "sass": "^1.32.8",
     "sass-loader": "^10.1.1",
     "stylelint": "^13.9.0",

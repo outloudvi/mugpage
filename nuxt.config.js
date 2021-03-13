@@ -77,6 +77,7 @@ export default {
         'remark-external-links',
         'remark-footnotes',
         'remark-emoji',
+        'remark-gfm',
       ],
       rehypePlugins: ['rehype-accessible-emojis'],
     },
