@@ -56,7 +56,7 @@ export default {
           to: { name: 'index' },
         },
       ],
-      games,
+      games: games.sort((a, b) => a.slug > b.slug),
     }
   },
 }
