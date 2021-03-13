@@ -5,8 +5,9 @@
         <div class="media-left">
           <figure class="image is-48x48">
             <img
-              src="https://bulma.io/images/placeholders/96x96.png"
-              alt="Placeholder image"
+              id="icon"
+              :src="require(`~/assets/icons/${slug}.png`)"
+              alt="Icon for the game"
             />
           </figure>
         </div>
@@ -41,15 +42,25 @@
 import Vue from 'vue'
 import { Component, Prop } from 'vue-property-decorator'
 import type { GameMeta } from '@/types'
+import type { IContentDocument } from '@nuxt/content/types/content'
 
 @Component
 export default class Infobox extends Vue {
   @Prop()
-  meta!: GameMeta
+  meta!: GameMeta & IContentDocument
+
+  get slug() {
+    const paths = this.meta.dir.split("/")
+    return paths[paths.length - 1]
+  }
 }
 </script>
 
 <style lang="scss" scoped>
+#icon {
+  border-radius: 10%;
+}
+
 #appStoreLinks {
   display: flex;
   flex-wrap: wrap;
