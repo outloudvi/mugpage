@@ -9,7 +9,6 @@ platform:
   ios: https://itunes.apple.com/jp/app/aidorumasuta-shindereragaruzu/id1016318735
 website: https://cinderella.idolmaster.jp/sl-stage/
 mapPolicy:
-  hasGivenMap: true
   hasPaidMap: unknown
   hasFreeWorkMap: true
   hasLimitedPurchaseMap: unknown

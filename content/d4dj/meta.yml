@@ -7,7 +7,6 @@ platform:
   ios: https://apps.apple.com/jp/app/id1490381755
 website: https://d4dj.bushimo.jp/
 mapPolicy:
-  hasGivenMap: true
   hasPaidMap: false
   hasFreeWorkMap: true
   hasLimitedPurchaseMap: false

@@ -19,7 +19,6 @@ export interface ScorePolicy {
 }
 
 export interface MapPolicy {
-  hasGivenMap: QuadValuedLogic
   hasPaidMap: QuadValuedLogic
   hasFreeWorkMap: QuadValuedLogic
   hasLimitedPurchaseMap: QuadValuedLogic

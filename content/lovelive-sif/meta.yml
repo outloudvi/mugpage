@@ -5,7 +5,6 @@ aka:
 developer: KLab
 website: https://lovelive.bushimo.jp/
 mapPolicy:
-  hasGivenMap: true
   hasPaidMap: false
   hasFreeWorkMap: unknown
   hasLimitedPurchaseMap: unknown

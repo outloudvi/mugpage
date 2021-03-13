@@ -12,7 +12,6 @@ export default class Infobox extends mixins<IBPolicyBase<MapPolicy>>(IBPolicyBas
   tooltip = "关于谱面获取方式的特性"
 
   policyNames = {
-    hasGivenMap: '包含赠送谱面',
     hasPaidMap: '包含付费谱面',
     hasFreeWorkMap: '包含需要任务解锁的谱面',
     hasLimitedPurchaseMap: '包含限定时间内购买的谱面',
