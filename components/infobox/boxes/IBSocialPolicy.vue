@@ -16,5 +16,9 @@ export default class Infobox extends mixins<IBPolicyBase<SocialPolicy>>(IBPolicy
     hasGlobalRanking: "包含曲目全域排名",
     hasEventRanking: "包含活动排名",
   }
+
+  policyDocs = {
+    hasEventRanking: '游戏中存在定期或不定期举行的活动，活动中的参与行为会给予玩家活动专用的点数，并会显示玩家的点数排名。'
+  }
 }
 </script>

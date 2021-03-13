@@ -19,5 +19,10 @@ export default class Infobox extends mixins<IBPolicyBase<MapPolicy>>(IBPolicyBas
     hasLimitedFreeMap: '包含限定时间内免费游玩/持有的谱面',
     difficultiesRequireSeperateUnlock: '不同难度谱面需要独立解锁',
   }
+
+  policyDocs = {
+    hasLimitedPurchaseMap: '指存在部分谱面需要在特定时期购买才能够游玩，之后则不再可以购买和/或游玩。',
+    hasLimitedExpiringMap: '指存在部分谱面会在某一个时间点起无法游玩。由于突发情况删除的不在此限。'
+  }
 }
 </script>
