@@ -8,8 +8,8 @@ website: https://arcaea.lowiro.com
 mapPolicy:
   hasPaidMap: true
   hasFreeWorkMap: true
-  hasLimitedPurchaseMap: "partial"
-  hasLimitedExpiringMap: "unknown"
+  hasLimitedPurchaseMap: false
+  hasLimitedExpiringMap: false
   hasLimitedFreeMap: true
   difficultiesRequireSeperateUnlock: true
 scorePolicy:
