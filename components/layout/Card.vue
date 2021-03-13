@@ -14,7 +14,7 @@
       >
         <span class="icon">
           <font-awesome-icon
-            v-if="hidden"
+            v-if="currHidden"
             :icon="['fas', 'angle-down']"
             aria-hidden="true"
           />
@@ -26,7 +26,7 @@
         </span>
       </div>
     </header>
-    <div class="card-content" :class="{ hidden }">
+    <div class="card-content" :class="{ hidden: currHidden }">
       <slot></slot>
     </div>
   </div>
@@ -47,8 +47,14 @@ export default class Infobox extends Vue {
   @Prop()
   tooltip!: string
 
+  currHidden = false
+
   toggleHidden() {
-    this.hidden = !this.hidden
+    this.currHidden = !this.currHidden
+  }
+
+  mounted() {
+    this.currHidden = this.hidden
   }
 }
 </script>
