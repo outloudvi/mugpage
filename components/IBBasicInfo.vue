@@ -15,9 +15,11 @@
           <p class="subtitle is-6">{{ meta.developer }}</p>
         </div>
       </div>
-
       <div class="content">
         <blockquote v-if="meta.tagline">{{ meta.tagline }}</blockquote>
+        <div class="mb-2">
+          <p v-if="meta.aka">别名: {{ meta.aka.join(' / ') }}</p>
+        </div>
         <div id="appStoreLinks">
           <a
             v-if="meta.platform.android"

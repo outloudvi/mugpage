@@ -36,6 +36,7 @@ export interface GameMeta {
   name: string
   developer?: string
   tagline?: string
+  aka?: string[]
   platform?: Record<GamePlatform, string>
   website?: string
   mapPolicy?: MapPolicy
