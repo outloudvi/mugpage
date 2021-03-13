@@ -28,12 +28,9 @@
         </ul>
         <p class="menu-label is-hidden-touch">Games</p>
         <ul class="menu-list">
-          <li v-for="(item, key) of games" :key="key">
-            <nuxt-link
-              :to="`/game/${item.toLowerCase()}`"
-              exact-active-class="is-active"
-            >
-              <b-icon :icon="item.icon" /> {{ item }}
+          <li v-for="({ slug, name }, key) of games" :key="key">
+            <nuxt-link :to="`/game/${slug}`" exact-active-class="is-active">
+              {{ name }}
             </nuxt-link>
           </li>
         </ul>
@@ -47,6 +44,8 @@
 </template>
 
 <script>
+import games from '@/assets/games'
+
 export default {
   data() {
     return {
@@ -57,7 +56,7 @@ export default {
           to: { name: 'index' },
         },
       ],
-      games: ['Arcaea'],
+      games,
     }
   },
 }
