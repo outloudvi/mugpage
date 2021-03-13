@@ -9,8 +9,8 @@ import Vue from 'vue'
 import { Component, Prop } from 'vue-property-decorator'
 import { analyzeQVL } from '@/utils/tr'
 
-import Card from './Card.vue'
-import KvTable from './KvTable.vue'
+import Card from '../layout/Card.vue'
+import KvTable from '@/components/layout/KvTable.vue'
 import { QuadValuedLogic } from '~/types'
 
 @Component({

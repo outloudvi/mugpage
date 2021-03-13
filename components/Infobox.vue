@@ -12,10 +12,10 @@ import Vue from 'vue'
 import { Component, Prop } from 'vue-property-decorator'
 import type { GameMeta } from '@/types'
 
-import IBBasicInfo from './IBBasicInfo.vue'
-import IBMapPolicy from './IBMapPolicy.vue'
-import IBScorePolicy from './IBScorePolicy.vue'
-import IBSocialPolicy from './IBSocialPolicy.vue'
+import IBBasicInfo from './infobox/boxes/IBBasicInfo.vue'
+import IBMapPolicy from './infobox/boxes/IBMapPolicy.vue'
+import IBScorePolicy from './infobox/boxes/IBScorePolicy.vue'
+import IBSocialPolicy from './infobox/boxes/IBSocialPolicy.vue'
 
 @Component({
   components: {

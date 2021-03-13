@@ -3,16 +3,9 @@ import { Component } from 'vue-property-decorator'
 import { mixins } from 'vue-class-component'
 import type { MapPolicy } from '@/types'
 
-import Card from './Card.vue'
-import KvTable from './KvTable.vue'
-import IBPolicyBase from './IBPolicyBase.vue'
+import IBPolicyBase from '../IBPolicyBase.vue'
 
-@Component({
-  components: {
-    Card,
-    KvTable,
-  },
-})
+@Component
 export default class Infobox extends mixins<IBPolicyBase<MapPolicy>>(IBPolicyBase) {
   title = "谱面特性"
 

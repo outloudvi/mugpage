@@ -3,16 +3,9 @@ import { Component } from 'vue-property-decorator'
 import { mixins } from 'vue-class-component'
 import type { SocialPolicy } from '@/types'
 
-import Card from './Card.vue'
-import KvTable from './KvTable.vue'
-import IBPolicyBase from './IBPolicyBase.vue'
+import IBPolicyBase from '../IBPolicyBase.vue'
 
-@Component({
-  components: {
-    Card,
-    KvTable,
-  },
-})
+@Component
 export default class Infobox extends mixins<IBPolicyBase<SocialPolicy>>(IBPolicyBase) {
   title = "社交特性"
 
