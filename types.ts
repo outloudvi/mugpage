@@ -6,7 +6,7 @@ export type QVLFalsy = false | 'f'
 export type QVLPartial = 'partial' | 'p'
 export type QVLUnknown = 'unknown' | null | undefined | 'u'
 
-export type QuadValueTF = QVLTruey | QVLFalsy
+export type QuadValueTF = QVLTruey | QVLFalsy | QVLUnknown
 export type QuadValuedLogic = QVLTruey | QVLFalsy | QVLPartial | QVLUnknown
 export interface GameEntry {
   name: string
@@ -32,6 +32,16 @@ export interface MapPolicy {
 
 export type MapPolicyKeys = keyof MapPolicy
 
+export interface SocialPolicy {
+  hasSocial: QuadValueTF
+  hasMultiPlay: QuadValueTF
+  hasFriendRanking: QuadValueTF
+  hasGlobalRanking: QuadValueTF
+  hasEventRanking: QuadValueTF
+}
+
+export type SocialPolicyKeys = keyof SocialPolicy
+
 export interface GameMeta {
   name: string
   developer?: string
@@ -41,4 +51,5 @@ export interface GameMeta {
   website?: string
   mapPolicy?: MapPolicy
   scorePolicy?: ScorePolicy
+  socialPolicy?: SocialPolicy
 }

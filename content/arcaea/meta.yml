@@ -16,3 +16,9 @@ mapPolicy:
 scorePolicy:
   comboDependent: false
   nonPlayerDependent: false
+socialPolicy:
+  hasSocial: true
+  hasMultiPlay: false
+  hasFriendRanking: true
+  hasGlobalRanking: true
+  hasEventRanking: false

@@ -3,6 +3,7 @@
     <IBBasicInfo :meta="meta" />
     <IBMapPolicy v-if="meta.mapPolicy" :meta="meta.mapPolicy" />
     <IBScorePolicy v-if="meta.scorePolicy" :meta="meta.scorePolicy" />
+    <IBSocialPolicy v-if="meta.socialPolicy" :meta="meta.socialPolicy" />
   </aside>
 </template>
 
@@ -14,12 +15,14 @@ import type { GameMeta } from '@/types'
 import IBBasicInfo from './IBBasicInfo.vue'
 import IBMapPolicy from './IBMapPolicy.vue'
 import IBScorePolicy from './IBScorePolicy.vue'
+import IBSocialPolicy from './IBSocialPolicy.vue'
 
 @Component({
   components: {
     IBBasicInfo,
     IBMapPolicy,
     IBScorePolicy,
+    IBSocialPolicy,
   },
 })
 export default class Infobox extends Vue {
@@ -39,3 +42,4 @@ export default class Infobox extends Vue {
   }
 }
 </style>
+
