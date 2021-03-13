@@ -30,9 +30,12 @@ export default class Infobox extends Vue {
 
 <style lang="scss" scoped>
 #aside {
-  float: right;
-  clear: right;
-  width: 23vw;
-  margin-left: 10px;
+  margin-bottom: 20px;
+  @media screen and (min-width: 769px) {
+    float: right;
+    clear: right;
+    width: 23vw;
+    margin-left: 10px;
+  }
 }
 </style>
