@@ -2,6 +2,7 @@
   <aside id="aside">
     <IBBasicInfo :meta="meta" />
     <IBMapPolicy v-if="meta.mapPolicy" :meta="meta.mapPolicy" />
+    <IBScorePolicy v-if="meta.scorePolicy" :meta="meta.scorePolicy" />
   </aside>
 </template>
 
@@ -12,11 +13,13 @@ import type { GameMeta } from '@/types'
 
 import IBBasicInfo from './IBBasicInfo.vue'
 import IBMapPolicy from './IBMapPolicy.vue'
+import IBScorePolicy from './IBScorePolicy.vue'
 
 @Component({
   components: {
     IBBasicInfo,
     IBMapPolicy,
+    IBScorePolicy,
   },
 })
 export default class Infobox extends Vue {

@@ -6,11 +6,19 @@ export type QVLFalsy = false | 'f'
 export type QVLPartial = 'partial' | 'p'
 export type QVLUnknown = 'unknown' | null | undefined | 'u'
 
+export type QuadValueTF = QVLTruey | QVLFalsy
 export type QuadValuedLogic = QVLTruey | QVLFalsy | QVLPartial | QVLUnknown
 export interface GameEntry {
   name: string
   slug: string
 }
+
+export interface ScorePolicy {
+  comboDependent: QuadValueTF
+  nonPlayerDependent: QuadValueTF
+}
+
+export type ScorePolicyKeys = keyof ScorePolicy
 
 export interface MapPolicy {
   hasGivenMap: QuadValuedLogic
@@ -31,4 +39,5 @@ export interface GameMeta {
   platform?: Record<GamePlatform, string>
   website?: string
   mapPolicy?: MapPolicy
+  scorePolicy?: ScorePolicy
 }

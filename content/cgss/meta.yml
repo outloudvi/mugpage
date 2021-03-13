@@ -12,3 +12,6 @@ mapPolicy:
   hasLimitedExpiringMap: unknown
   hasLimitedFreeMap: unknown
   difficultiesRequireSeperateUnlock: true
+scorePolicy:
+  comboDependent: unknown
+  nonPlayerDependent: true
