@@ -18,7 +18,7 @@
         </div>
 
         <div class="content">
-          <blockquote>创新立体节奏游戏</blockquote>
+          <blockquote v-if="meta.tagline">{{ meta.tagline }}</blockquote>
           <div id="appStoreLinks">
             <a
               v-if="meta.platform.android"

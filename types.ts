@@ -7,6 +7,7 @@ export interface GameEntry {
 export interface GameMeta {
   name: string
   developer?: string
+  tagline?: string
   platform?: Record<GamePlatform, string>
   website?: string
 }
