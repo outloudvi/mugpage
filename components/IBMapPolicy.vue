@@ -1,12 +1,7 @@
 <template>
-  <div class="card">
-    <header class="card-header">
-      <p class="card-header-title">谱面特性</p>
-    </header>
-    <div class="card-content">
-      <KvTable :table="cnContent" />
-    </div>
-  </div>
+  <Card title="谱面特性">
+    <KvTable :table="cnContent" />
+  </Card>
 </template>
 
 <script lang="ts">
@@ -15,10 +10,14 @@ import { Component, Prop } from 'vue-property-decorator'
 import type { MapPolicy, MapPolicyKeys } from '@/types'
 import { analyzeQVL } from '@/utils/tr'
 
+import Card from './Card.vue'
 import KvTable from './KvTable.vue'
 
 @Component({
-  components: { KvTable },
+  components: {
+    Card,
+    KvTable,
+  },
 })
 export default class Infobox extends Vue {
   @Prop()
@@ -35,10 +34,10 @@ export default class Infobox extends Vue {
   }
 
   get cnContent() {
-    return Object.entries(this.meta).map(([key, val], _) => (({
+    return Object.entries(this.meta).map(([key, val], _) => ({
       key: this.policyNames[key as MapPolicyKeys],
       value: analyzeQVL(val),
-    })))
+    }))
   }
 }
 </script>

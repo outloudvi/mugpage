@@ -1,12 +1,7 @@
 <template>
-  <div class="card">
-    <header class="card-header">
-      <p class="card-header-title">分数计算特性</p>
-    </header>
-    <div class="card-content">
-      <KvTable :table="cnContent" />
-    </div>
-  </div>
+  <Card title="分数计算特性">
+    <KvTable :table="cnContent" />
+  </Card>
 </template>
 
 <script lang="ts">
@@ -15,10 +10,14 @@ import { Component, Prop } from 'vue-property-decorator'
 import type { ScorePolicy, ScorePolicyKeys } from '@/types'
 import { analyzeQVL } from '@/utils/tr'
 
+import Card from './Card.vue'
 import KvTable from './KvTable.vue'
 
 @Component({
-  components: { KvTable },
+  components: {
+    Card,
+    KvTable,
+  },
 })
 export default class Infobox extends Vue {
   @Prop()
