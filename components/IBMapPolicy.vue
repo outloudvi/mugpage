@@ -41,25 +41,3 @@ export default class Infobox extends Vue {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-.tableUnit {
-  position: relative;
-}
-
-.colorYes {
-  background-color: #d4eddb;
-}
-
-.colorNo {
-  background-color: #a5a4df;
-}
-
-.colorPartial {
-  background-color: #daf0fb;
-}
-
-.colorUnknown {
-  background-color: #ddd;
-}
-</style>
