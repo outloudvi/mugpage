@@ -13,6 +13,10 @@ const games: GameEntry[] = [
     slug: 'd4dj',
     name: 'D4DJ Groovy Mix',
   },
+  {
+    slug: 'lovelive-sif',
+    name: 'Love Live! 学园偶像祭',
+  },
 ]
 
 export default games

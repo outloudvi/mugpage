@@ -1,0 +1,23 @@
+name: Love Live! 学园偶像祭
+originalName: ラブライブ！スクールアイドルフェスティバル
+aka:
+  - LLSIF
+developer: KLab
+website: https://lovelive.bushimo.jp/
+mapPolicy:
+  hasGivenMap: true
+  hasPaidMap: false
+  hasFreeWorkMap: unknown
+  hasLimitedPurchaseMap: unknown
+  hasLimitedExpiringMap: unknown
+  hasLimitedFreeMap: unknown
+  difficultiesRequireSeperateUnlock: unknown
+scorePolicy:
+  comboDependent: unknown
+  nonPlayerDependent: true
+socialPolicy:
+  hasSocial: true
+  hasMultiPlay: true
+  hasFriendRanking: unknown
+  hasGlobalRanking: unknown
+  hasEventRanking: true
