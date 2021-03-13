@@ -71,8 +71,10 @@ export default {
         'remark-squeeze-paragraphs',
         'remark-slug',
         'remark-external-links',
-        'remark-footnotes'
+        'remark-footnotes',
+        'remark-emoji',
       ],
+      rehypePlugins: ['rehype-accessible-emojis'],
     },
   },
 
