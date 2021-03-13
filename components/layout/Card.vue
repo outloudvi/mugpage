@@ -41,7 +41,8 @@ export default class Infobox extends Vue {
   @Prop()
   title!: string
 
-  hidden: boolean = false
+  @Prop({ default: false })
+  hidden!: boolean
 
   @Prop()
   tooltip!: string

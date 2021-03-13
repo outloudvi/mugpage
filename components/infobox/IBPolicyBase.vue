@@ -1,5 +1,5 @@
 <template>
-  <Card :title="title" :tooltip="tooltip">
+  <Card :title="title" :tooltip="tooltip" :hidden="true">
     <KvTable :table="cnContent" />
   </Card>
 </template>
