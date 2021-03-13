@@ -1,6 +1,6 @@
 <template>
   <Card :title="title" :tooltip="tooltip" :hidden="true">
-    <KvTable :table="cnContent" />
+    <KvTable :table="cnContent" :tableDocs="policyDocs" />
   </Card>
 </template>
 
@@ -29,9 +29,12 @@ export default class IBPolicyBase<T> extends Vue {
 
   policyNames!: Record<keyof T, string>
 
+  policyDocs: Partial<Record<keyof T, string>> = {}
+
   get cnContent() {
     return Object.entries(this.meta).map(([key, val], _) => (({
-      key: this.policyNames[key as keyof T],
+      key,
+      label: this.policyNames[key as keyof T],
       value: analyzeQVL(val as QuadValuedLogic),
     })))
   }
