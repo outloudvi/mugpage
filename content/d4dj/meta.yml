@@ -1,0 +1,17 @@
+name: D4DJ Groovy Mix
+developer: Bushimo
+platform:
+  android: com.bushiroad.d4dj
+  ios: https://apps.apple.com/jp/app/id1490381755
+website: https://d4dj.bushimo.jp/
+mapPolicy:
+  hasGivenMap: true
+  hasPaidMap: false
+  hasFreeWorkMap: true
+  hasLimitedPurchaseMap: false
+  hasLimitedExpiringMap: false
+  hasLimitedFreeMap: false
+  difficultiesRequireSeperateUnlock: false
+scorePolicy:
+  comboDependent: unknown
+  nonPlayerDependent: true
