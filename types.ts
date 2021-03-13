@@ -18,8 +18,6 @@ export interface ScorePolicy {
   nonPlayerDependent: QuadValueTF
 }
 
-export type ScorePolicyKeys = keyof ScorePolicy
-
 export interface MapPolicy {
   hasGivenMap: QuadValuedLogic
   hasPaidMap: QuadValuedLogic
@@ -30,8 +28,6 @@ export interface MapPolicy {
   difficultiesRequireSeperateUnlock: QuadValuedLogic
 }
 
-export type MapPolicyKeys = keyof MapPolicy
-
 export interface SocialPolicy {
   hasSocial: QuadValueTF
   hasMultiPlay: QuadValueTF
@@ -39,8 +35,6 @@ export interface SocialPolicy {
   hasGlobalRanking: QuadValueTF
   hasEventRanking: QuadValueTF
 }
-
-export type SocialPolicyKeys = keyof SocialPolicy
 
 export interface GameMeta {
   name: string

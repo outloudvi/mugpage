@@ -1,17 +1,11 @@
-<template>
-  <Card title="谱面特性">
-    <KvTable :table="cnContent" />
-  </Card>
-</template>
-
 <script lang="ts">
-import Vue from 'vue'
-import { Component, Prop } from 'vue-property-decorator'
-import type { MapPolicy, MapPolicyKeys } from '@/types'
-import { analyzeQVL } from '@/utils/tr'
+import { Component } from 'vue-property-decorator'
+import { mixins } from 'vue-class-component'
+import type { MapPolicy } from '@/types'
 
 import Card from './Card.vue'
 import KvTable from './KvTable.vue'
+import IBPolicyBase from './IBPolicyBase.vue'
 
 @Component({
   components: {
@@ -19,11 +13,10 @@ import KvTable from './KvTable.vue'
     KvTable,
   },
 })
-export default class Infobox extends Vue {
-  @Prop()
-  meta!: MapPolicy
+export default class Infobox extends mixins<IBPolicyBase<MapPolicy>>(IBPolicyBase) {
+  title = "谱面特性"
 
-  policyNames: Record<MapPolicyKeys, string> = {
+  policyNames = {
     hasGivenMap: '包含赠送谱面',
     hasPaidMap: '包含付费谱面',
     hasFreeWorkMap: '包含需要任务解锁的谱面',
@@ -31,13 +24,6 @@ export default class Infobox extends Vue {
     hasLimitedExpiringMap: '包含限定时间内游玩的谱面',
     hasLimitedFreeMap: '包含限定时间内免费游玩/持有的谱面',
     difficultiesRequireSeperateUnlock: '不同难度谱面需要独立解锁',
-  }
-
-  get cnContent() {
-    return Object.entries(this.meta).map(([key, val], _) => ({
-      key: this.policyNames[key as MapPolicyKeys],
-      value: analyzeQVL(val),
-    }))
   }
 }
 </script>
