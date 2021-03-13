@@ -5,3 +5,11 @@ platform:
   android: moe.low.arc
   ios: https://apps.apple.com/us/app/arcaea/id1205999125
 website: https://arcaea.lowiro.com
+mapPolicy:
+  hasGivenMap: true
+  hasPaidMap: true
+  hasFreeWorkMap: true
+  hasLimitedPurchaseMap: "partial"
+  hasLimitedExpiringMap: "unknown"
+  hasLimitedFreeMap: true
+  difficultiesRequireSeperateUnlock: true
