@@ -32,7 +32,7 @@ export default class Infobox extends Vue {
 }
 
 .colorNo {
-  background-color: #a5a4df;
+  background-color: #d3d2e8;
 }
 
 .colorPartial {
