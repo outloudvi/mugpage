@@ -9,7 +9,12 @@
 
 <script>
 export default {
-  name: 'HomePage',
+  name: 'Home',
+  head() {
+    return {
+      title: 'Home',
+    }
+  },
   async asyncData({ $content }) {
     return { text: await $content(`index`).fetch() }
   },

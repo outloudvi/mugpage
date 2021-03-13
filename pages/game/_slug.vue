@@ -24,6 +24,10 @@ export default Vue.extend({
     const text = await $content(`${slug}/index`).fetch()
     return { meta, text }
   },
+  head() {
+    // @ts-ignore
+    return { title: this.meta.name }
+  },
   data() {
     return {
       meta: {},
