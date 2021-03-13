@@ -1,12 +1,14 @@
 <template>
   <section class="section">
     <Infobox :meta="meta" />
-    <h2 class="title is-3">
-      {{ meta.name }}
-    </h2>
-    <article class="content">
-      <nuxt-content :document="text" />
-    </article>
+    <main>
+      <h2 class="title is-3">
+        {{ meta.name }}
+      </h2>
+      <article class="content">
+        <nuxt-content :document="text" />
+      </article>
+    </main>
   </section>
 </template>
 

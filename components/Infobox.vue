@@ -31,6 +31,7 @@ export default class Infobox extends Vue {
 <style lang="scss" scoped>
 #aside {
   float: right;
+  clear: right;
   width: 23vw;
 }
 </style>
