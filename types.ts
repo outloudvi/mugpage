@@ -38,6 +38,7 @@ export interface SocialPolicy {
 
 export interface GameMeta {
   name: string
+  originalName?: string
   developer?: string
   tagline?: string
   aka?: string[]

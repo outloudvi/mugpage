@@ -18,9 +18,10 @@
       <div class="content">
         <blockquote v-if="meta.tagline">{{ meta.tagline }}</blockquote>
         <div class="mb-2">
+          <p v-if="meta.originalName">原名: {{ meta.originalName }}</p>
           <p v-if="meta.aka">别名: {{ meta.aka.join(' / ') }}</p>
         </div>
-        <div id="appStoreLinks">
+        <div v-if="meta.platform" id="appStoreLinks">
           <a
             v-if="meta.platform.android"
             :href="`https://play.google.com/store/apps/details?id=${meta.platform.android}`"
