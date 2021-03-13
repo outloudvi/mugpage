@@ -65,7 +65,16 @@ export default {
   },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
-  content: {},
+  content: {
+    markdown: {
+      remarkPlugins: () => [
+        'remark-squeeze-paragraphs',
+        'remark-slug',
+        'remark-external-links',
+        'remark-footnotes'
+      ],
+    },
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
