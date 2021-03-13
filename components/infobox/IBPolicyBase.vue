@@ -1,5 +1,5 @@
 <template>
-  <Card :title="title">
+  <Card :title="title" :tooltip="tooltip">
     <KvTable :table="cnContent" />
   </Card>
 </template>
@@ -24,6 +24,8 @@ export default class IBPolicyBase<T> extends Vue {
   meta!: T
 
   title!: string
+
+  tooltip: string = ""
 
   policyNames!: Record<keyof T, string>
 

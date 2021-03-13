@@ -9,6 +9,8 @@ import IBPolicyBase from '../IBPolicyBase.vue'
 export default class Infobox extends mixins<IBPolicyBase<MapPolicy>>(IBPolicyBase) {
   title = "谱面特性"
 
+  tooltip = "关于谱面获取方式的特性"
+
   policyNames = {
     hasGivenMap: '包含赠送谱面',
     hasPaidMap: '包含付费谱面',

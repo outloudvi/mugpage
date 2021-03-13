@@ -1,7 +1,12 @@
 <template>
   <div class="card">
     <header class="card-header">
-      <p class="card-header-title">{{ title }}</p>
+      <p class="card-header-title">
+        <b-tooltip :label="tooltip" position="is-right" v-if="tooltip !== ''">
+          {{ title }}
+        </b-tooltip>
+        <template v-else>{{ title }}</template>
+      </p>
       <div
         class="card-header-icon"
         aria-label="toggle column"
@@ -37,6 +42,9 @@ export default class Infobox extends Vue {
   title!: string
 
   hidden: boolean = false
+
+  @Prop()
+  tooltip!: string
 
   toggleHidden() {
     this.hidden = !this.hidden
