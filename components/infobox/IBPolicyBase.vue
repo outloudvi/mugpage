@@ -32,11 +32,15 @@ export default class IBPolicyBase<T> extends Vue {
   policyDocs: Partial<Record<keyof T, string>> = {}
 
   get cnContent() {
-    return Object.entries(this.meta).map(([key, val], _) => (({
-      key,
-      label: this.policyNames[key as keyof T],
-      value: analyzeQVL(val as QuadValuedLogic),
-    })))
+    return Object.entries(this.meta).map(([key, val], _) => {
+      const qvResponse = analyzeQVL(val as QuadValuedLogic)
+      return {
+        key,
+        label: this.policyNames[key as keyof T],
+        value: qvResponse.value,
+        comment: qvResponse.comment
+      }
+    })
   }
 }
 </script>

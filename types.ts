@@ -6,33 +6,40 @@ export type QVLFalsy = false | 'f'
 export type QVLPartial = 'partial' | 'p'
 export type QVLUnknown = 'unknown' | null | undefined | 'u'
 
+export type QuadValueWithOptionalComments<T> = [T, string] | T
+
 export type QuadValueTF = QVLTruey | QVLFalsy | QVLUnknown
+
 export type QuadValuedLogic = QVLTruey | QVLFalsy | QVLPartial | QVLUnknown
+
+export type QVTF = QuadValueWithOptionalComments<QuadValueTF>
+export type QVAny = QuadValueWithOptionalComments<QuadValuedLogic>
+
 export interface GameEntry {
   name: string
   slug: string
 }
 
 export interface ScorePolicy {
-  comboDependent: QuadValueTF
-  nonPlayerDependent: QuadValueTF
+  comboDependent: QVTF
+  nonPlayerDependent: QVTF
 }
 
 export interface MapPolicy {
-  hasPaidMap: QuadValuedLogic
-  hasFreeWorkMap: QuadValuedLogic
-  hasLimitedPurchaseMap: QuadValuedLogic
-  hasLimitedExpiringMap: QuadValuedLogic
-  hasLimitedFreeMap: QuadValuedLogic
-  difficultiesRequireSeperateUnlock: QuadValuedLogic
+  hasPaidMap: QVAny
+  hasFreeWorkMap: QVAny
+  hasLimitedPurchaseMap: QVAny
+  hasLimitedExpiringMap: QVAny
+  hasLimitedFreeMap: QVAny
+  difficultiesRequireSeperateUnlock: QVAny
 }
 
 export interface SocialPolicy {
-  hasSocial: QuadValueTF
-  hasMultiPlay: QuadValueTF
-  hasFriendRanking: QuadValueTF
-  hasGlobalRanking: QuadValueTF
-  hasEventRanking: QuadValueTF
+  hasSocial: QVTF
+  hasMultiPlay: QVTF
+  hasFriendRanking: QVTF
+  hasGlobalRanking: QVTF
+  hasEventRanking: QVTF
 }
 
 export interface GameMeta {

@@ -10,7 +10,9 @@ mapPolicy:
   hasFreeWorkMap: true
   hasLimitedPurchaseMap: false
   hasLimitedExpiringMap: false
-  hasLimitedFreeMap: true
+  hasLimitedFreeMap:
+    - true
+    - 指 World Extend 曲包。
   difficultiesRequireSeperateUnlock: true
 scorePolicy:
   comboDependent: false

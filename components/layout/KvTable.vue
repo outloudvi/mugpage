@@ -3,39 +3,40 @@
     :data="table"
     :show-header="false"
     detailed
+    ref="bTable"
     :show-detail-icon="false"
   >
-    <b-table-column v-slot="props" field="key">
+    <b-table-column v-slot="props" field="key" label="key">
       <a
-        @click="props.toggleDetails(props.row)"
+        @click="showDetails(props, props.row, false)"
         v-if="tableDocs[props.row.key]"
       >
         {{ props.row.label }}
       </a>
-      <span v-else>{{ props.row.label }}</span>
+      <template v-else>{{ props.row.label }}</template>
     </b-table-column>
 
-    <b-table-column v-slot="props" field="value" centered>
-      <template v-if="props.row.nonQVL">
-        {{ props.row.value }}
-      </template>
-      <template v-else>
-        <div v-if="props.row.value == 't'" class="tableUnit colorYes">是</div>
-        <div v-else-if="props.row.value == 'f'" class="tableUnit colorNo">
-          否
-        </div>
-        <div v-else-if="props.row.value == 'p'" class="tableUnit colorPartial">
-          部分
-        </div>
-        <div v-else class="tableUnit colorUnknown">未知</div>
-      </template>
+    <b-table-column v-slot="props" field="value" label="value" centered>
+      <a @click="showDetails(props, props.row, true)" v-if="props.row.comment">
+        <template v-if="props.row.nonQVL"> {{ props.row.value }}*</template>
+        <template v-else><KvTableUnit :value="props.row.value" />*</template>
+      </a>
+      <span v-else>
+        <template v-if="props.row.nonQVL"> {{ props.row.value }}</template>
+        <template v-else><KvTableUnit :value="props.row.value" /></template>
+      </span>
     </b-table-column>
 
     <template #detail="props">
       <article>
-        <strong>{{ props.row.label }} </strong>
+        <b v-if="!props.row.showComment">{{ props.row.label }}</b>
         <p>
-          {{ tableDocs[props.row.key] }}
+          <template v-if="props.row.showComment">
+            {{ props.row.comment }}
+          </template>
+          <template v-else>
+            {{ tableDocs[props.row.key] }}
+          </template>
         </p>
       </article>
     </template>
@@ -46,30 +47,46 @@
 import Vue from 'vue'
 import { Component, Prop } from 'vue-property-decorator'
 
-@Component
+import KvTableUnit from './KvTableUnit.vue'
+
+@Component({
+  components: {
+    KvTableUnit,
+  }
+})
 export default class Infobox extends Vue {
   @Prop()
-  table!: { key: string, label: string, value: string, nonQVL?: boolean }[]
+  table!: { key: string, label: string, value: string, comment?: string, nonQVL?: boolean }[]
 
   @Prop({ default: () => ({}) })
   tableDocs!: Record<string, string>
+
+  showDetails(props: any, row: any, comment: boolean) {
+    // ... any better ideas?
+
+    (function () {
+      // @ts-ignore
+      const found = this.isVisibleDetailRow(row)
+
+      if (found && (row.showComment !== comment)) {
+        // @ts-ignore
+        this.$set(row, 'showComment', comment)
+      } else if (found) {
+        // @ts-ignore
+        this.closeDetailRow(row)
+        // @ts-ignore
+        this.$emit('details-close', row)
+      } else {
+        // @ts-ignore
+        this.$set(row, 'showComment', comment)
+        // @ts-ignore
+        this.openDetailRow(row)
+        // @ts-ignore
+        this.$emit('details-open', row)
+      }
+      // @ts-ignore
+      this.$emit('update:openedDetailed', props.visibleDetailRows)
+    }).bind(this.$refs.bTable)()
+  }
 }
 </script>
-
-<style lang="scss" scoped>
-.colorYes {
-  background-color: #d4eddb;
-}
-
-.colorNo {
-  background-color: #d3d2e8;
-}
-
-.colorPartial {
-  background-color: #daf0fb;
-}
-
-.colorUnknown {
-  background-color: #ddd;
-}
-</style>
