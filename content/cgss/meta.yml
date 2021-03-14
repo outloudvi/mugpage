@@ -8,6 +8,12 @@ platform:
   android: jp.co.bandainamcoent.BNEI0242
   ios: https://itunes.apple.com/jp/app/aidorumasuta-shindereragaruzu/id1016318735
 website: https://cinderella.idolmaster.jp/sl-stage/
+gameplayPolicy:
+  hasFail: true
+  gameDimension: 1
+  trackCount: 5
+  linearTrack: false
+  hasFlip: true
 mapPolicy:
   hasPaidMap: unknown
   hasFreeWorkMap: true

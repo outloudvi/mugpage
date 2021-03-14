@@ -6,6 +6,14 @@ platform:
   android: com.bushiroad.d4dj
   ios: https://apps.apple.com/jp/app/id1490381755
 website: https://d4dj.bushimo.jp/
+gameplayPolicy:
+  hasFail: true
+  gameDimension: 1
+  trackCount:
+    - 6
+    - 这里包含了两侧的音轨。
+  linearTrack: true
+  hasFlip: true
 mapPolicy:
   hasPaidMap: false
   hasFreeWorkMap: true

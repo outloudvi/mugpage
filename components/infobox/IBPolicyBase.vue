@@ -31,6 +31,8 @@ export default class IBPolicyBase<T> extends Vue {
 
   policyDocs: Partial<Record<keyof T, string>> = {}
 
+  nonQVLList: string[] = []
+
   get cnContent() {
     return Object.entries(this.meta).map(([key, val], _) => {
       const qvResponse = analyzeQVL(val as QuadValuedLogic)
@@ -38,7 +40,8 @@ export default class IBPolicyBase<T> extends Vue {
         key,
         label: this.policyNames[key as keyof T],
         value: qvResponse.value,
-        comment: qvResponse.comment
+        comment: qvResponse.comment,
+        nonQVL: this.nonQVLList.includes(key)
       }
     })
   }

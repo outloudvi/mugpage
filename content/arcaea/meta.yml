@@ -5,6 +5,14 @@ platform:
   android: moe.low.arc
   ios: https://apps.apple.com/us/app/arcaea/id1205999125
 website: https://arcaea.lowiro.com
+gameplayPolicy:
+  hasFail:
+    - true
+    - 使用 Hard 模式的角色，在回亿率为 0 时将被直接判定为失败。
+  gameDimension: 1
+  trackCount: 4
+  linearTrack: true
+  hasFlip: false
 mapPolicy:
   hasPaidMap: true
   hasFreeWorkMap: true

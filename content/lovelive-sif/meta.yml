@@ -4,6 +4,12 @@ aka:
   - LLSIF
 developer: KLab
 website: https://lovelive.bushimo.jp/
+gameplayPolicy:
+  hasFail: true
+  gameDimension: 1
+  trackCount: 9
+  linearTrack: true
+  hasFlip: true
 mapPolicy:
   hasPaidMap: false
   hasFreeWorkMap: unknown

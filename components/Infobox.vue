@@ -1,6 +1,7 @@
 <template>
   <aside id="aside">
     <IBBasicInfo :meta="meta" />
+    <IBGameplayPolicy v-if="meta.gameplayPolicy" :meta="meta.gameplayPolicy" />
     <IBMapPolicy v-if="meta.mapPolicy" :meta="meta.mapPolicy" />
     <IBScorePolicy v-if="meta.scorePolicy" :meta="meta.scorePolicy" />
     <IBSocialPolicy v-if="meta.socialPolicy" :meta="meta.socialPolicy" />
@@ -13,6 +14,7 @@ import { Component, Prop } from 'vue-property-decorator'
 import type { GameMeta } from '@/types'
 
 import IBBasicInfo from './infobox/boxes/IBBasicInfo.vue'
+import IBGameplayPolicy from './infobox/boxes/IBGameplayPolicy.vue'
 import IBMapPolicy from './infobox/boxes/IBMapPolicy.vue'
 import IBScorePolicy from './infobox/boxes/IBScorePolicy.vue'
 import IBSocialPolicy from './infobox/boxes/IBSocialPolicy.vue'
@@ -20,6 +22,7 @@ import IBSocialPolicy from './infobox/boxes/IBSocialPolicy.vue'
 @Component({
   components: {
     IBBasicInfo,
+    IBGameplayPolicy,
     IBMapPolicy,
     IBScorePolicy,
     IBSocialPolicy,

@@ -8,16 +8,27 @@ export type QVLUnknown = 'unknown' | null | undefined | 'u'
 
 export type QuadValueWithOptionalComments<T> = [T, string] | T
 
+export type QV<T> = QuadValueWithOptionalComments<T>
+
 export type QuadValueTF = QVLTruey | QVLFalsy | QVLUnknown
 
 export type QuadValuedLogic = QVLTruey | QVLFalsy | QVLPartial | QVLUnknown
 
-export type QVTF = QuadValueWithOptionalComments<QuadValueTF>
-export type QVAny = QuadValueWithOptionalComments<QuadValuedLogic>
+export type QVNumber = QV<number>
+export type QVTF = QV<QuadValueTF>
+export type QVAny = QV<QuadValuedLogic>
 
 export interface GameEntry {
   name: string
   slug: string
+}
+
+export interface GameplayPolicy {
+  hasFail?: QVAny
+  gameDimension?: QVNumber
+  trackCount?: QVNumber
+  linearTrack?: QVTF
+  hasFlip?: QVTF
 }
 
 export interface ScorePolicy {
@@ -50,6 +61,7 @@ export interface GameMeta {
   aka?: string[]
   platform?: Record<GamePlatform, string>
   website?: string
+  gameplayPolicy?: GameplayPolicy
   mapPolicy?: MapPolicy
   scorePolicy?: ScorePolicy
   socialPolicy?: SocialPolicy
