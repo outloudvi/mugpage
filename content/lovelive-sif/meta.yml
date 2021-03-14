@@ -20,6 +20,7 @@ mapPolicy:
 scorePolicy:
   comboDependent: unknown
   nonPlayerDependent: true
+  flatMaxScore: unknown
 socialPolicy:
   hasSocial: true
   hasMultiPlay: true

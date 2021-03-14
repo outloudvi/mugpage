@@ -34,6 +34,7 @@ export interface GameplayPolicy {
 export interface ScorePolicy {
   comboDependent: QVTF
   nonPlayerDependent: QVTF
+  flatMaxScore: QVTF
 }
 
 export interface MapPolicy {
