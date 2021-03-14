@@ -1,8 +1,8 @@
 <template>
-  <div v-if="value == 't'" class="tableUnit colorYes">是</div>
-  <div v-else-if="value == 'f'" class="tableUnit colorNo">否</div>
-  <div v-else-if="value == 'p'" class="tableUnit colorPartial">部分</div>
-  <div v-else class="tableUnit colorUnknown">未知</div>
+  <span v-if="value == 't'" class="tableUnit colorYes">是</span>
+  <span v-else-if="value == 'f'" class="tableUnit colorNo">否</span>
+  <span v-else-if="value == 'p'" class="tableUnit colorPartial">部分</span>
+  <span v-else class="tableUnit colorUnknown">未知</span>
 </template>
 
 <script lang="ts">

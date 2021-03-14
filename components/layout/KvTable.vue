@@ -6,7 +6,7 @@
     ref="bTable"
     :show-detail-icon="false"
   >
-    <b-table-column v-slot="props" field="key" label="key">
+    <b-table-column v-slot="props" field="key" label="项目">
       <a
         @click="showDetails(props, props.row, false)"
         v-if="tableDocs[props.row.key]"
@@ -16,15 +16,28 @@
       <template v-else>{{ props.row.label }}</template>
     </b-table-column>
 
-    <b-table-column v-slot="props" field="value" label="value" centered>
-      <a @click="showDetails(props, props.row, true)" v-if="props.row.comment">
-        <template v-if="props.row.nonQVL"> {{ props.row.value }}*</template>
-        <template v-else><KvTableUnit :value="props.row.value" />*</template>
-      </a>
-      <span v-else>
-        <template v-if="props.row.nonQVL"> {{ props.row.value }}</template>
-        <template v-else><KvTableUnit :value="props.row.value" /></template>
-      </span>
+    <b-table-column
+      cell-class="tableColumn"
+      v-slot="props"
+      field="value"
+      label="状态"
+      centered
+    >
+      <div
+        class="tableColoredCell"
+        :class="{
+          [`table-${props.row.value}`]: true,
+          clickable: props.row.comment,
+        }"
+        tabindex="0"
+        @click="props.row.comment && showDetails(props, props.row, true)"
+      >
+        <div>
+          <template v-if="props.row.nonQVL"> {{ props.row.value }}</template>
+          <template v-else><KvTableUnit :value="props.row.value" /></template
+          ><template v-if="props.row.comment">*</template>
+        </div>
+      </div>
     </b-table-column>
 
     <template #detail="props">
@@ -90,3 +103,47 @@ export default class Infobox extends Vue {
   }
 }
 </script>
+
+<style lang="scss">
+.tableColumn {
+  position: relative;
+  width: 45px;
+}
+</style>
+
+<style lang="scss" scoped>
+.tableColoredCell {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (min-width: 770px) {
+    width: 50px;
+  }
+
+  &.clickable:hover {
+    cursor: pointer;
+  }
+
+  &.table-t {
+    background-color: #d4eddb;
+  }
+
+  &.table-f {
+    background-color: #d3d2e8;
+  }
+
+  &.table-p {
+    background-color: #daf0fb;
+  }
+
+  &.table-u {
+    background-color: #ddd;
+  }
+}
+</style>
