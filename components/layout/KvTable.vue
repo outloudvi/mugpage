@@ -112,7 +112,10 @@ export default class Infobox extends Vue {
 <style lang="scss">
 .tableColumn {
   position: relative;
-  width: 45px;
+
+  @media screen and (min-width: 770px) {
+    width: 50px;
+  }
 }
 </style>
 
