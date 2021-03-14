@@ -53,10 +53,6 @@ export default class Infobox extends Vue {
 
   @Prop({ default: () => ({}) })
   tableDocs!: Record<string, string>
-
-  mounted() {
-    console.log(this.tableDocs)
-  }
 }
 </script>
 
