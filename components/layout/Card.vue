@@ -11,6 +11,9 @@
         class="card-header-icon"
         aria-label="toggle column"
         @click="toggleHidden()"
+        aria-labelledby="expand this group"
+        :aria-expanded="!currHidden"
+        tabindex="0"
       >
         <span class="icon">
           <font-awesome-icon

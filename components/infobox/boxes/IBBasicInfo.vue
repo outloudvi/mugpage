@@ -3,7 +3,7 @@
     <div class="card-content">
       <div class="media">
         <div class="media-left">
-          <figure class="image is-48x48">
+          <figure class="image is-48x48" aria-label="icon for the game">
             <img
               id="icon"
               :src="require(`~/assets/icons/${slug}.png`)"

@@ -10,6 +10,9 @@
       <a
         @click="showDetails(props, props.row, false)"
         v-if="tableDocs[props.row.key]"
+        aria-label="expand entry details"
+        :aria-pressed="props.row.showComment === false"
+        tabindex="0"
       >
         {{ props.row.label }}
       </a>
@@ -29,7 +32,9 @@
           [`table-${props.row.value}`]: true,
           clickable: props.row.comment,
         }"
-        tabindex="0"
+        :aria-pressed="props.row.showComment === true"
+        aria-label="expand comments"
+        :tabindex="props.row.comment && 0"
         @click="props.row.comment && showDetails(props, props.row, true)"
       >
         <div>
