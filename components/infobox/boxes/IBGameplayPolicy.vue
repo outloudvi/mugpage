@@ -21,7 +21,7 @@ export default class Infobox extends mixins<IBPolicyBase<GameplayPolicy>>(IBPoli
     gameDimension: "谱面维度",
     trackCount: "轨道数量",
     linearTrack: "线性轨道",
-    hasFlip: "包含滑键",
+    hasFlick: "包含滑键",
   }
 }
 </script>

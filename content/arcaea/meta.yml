@@ -12,7 +12,7 @@ gameplayPolicy:
   gameDimension: 1
   trackCount: 4
   linearTrack: true
-  hasFlip: false
+  hasFlick: false
 mapPolicy:
   hasPaidMap: true
   hasFreeWorkMap: true
