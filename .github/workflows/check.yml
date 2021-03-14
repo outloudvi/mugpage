@@ -1,4 +1,4 @@
-name: Build & Deploy
+name: Check
 
 on: [push, pull_request]
 
