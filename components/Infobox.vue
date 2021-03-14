@@ -37,8 +37,11 @@ export default class Infobox extends Vue {
   @media screen and (min-width: 769px) {
     float: right;
     clear: right;
-    width: 23vw;
+    width: 40vw;
     margin-left: 10px;
+  }
+  @media screen and (min-width: 1216px) {
+    width: 23vw;
   }
 }
 </style>
