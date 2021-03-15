@@ -12,6 +12,7 @@ export default class Infobox extends mixins<IBPolicyBase<SocialPolicy>>(IBPolicy
   policyNames = {
     hasSocial: "包含社交功能",
     hasMultiPlay: "包含多人游戏功能",
+    hasRateSystem: "包含能力点数系统",
     hasFriendRanking: "包含曲目好友排名",
     hasGlobalRanking: "包含曲目全域排名",
     hasEventRanking: "包含活动排名",

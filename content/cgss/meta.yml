@@ -28,6 +28,9 @@ scorePolicy:
 socialPolicy:
   hasSocial: true
   hasMultiPlay: true
+  hasRateSystem:
+    - true
+    - 即 Producer Rating Point（简称 PRP）。
   hasFriendRanking: unknown
   hasGlobalRanking: unknown
   hasEventRanking: unknown

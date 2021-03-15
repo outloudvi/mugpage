@@ -48,6 +48,7 @@ export interface MapPolicy {
 
 export interface SocialPolicy {
   hasSocial: QVTF
+  hasRateSystem: QVTF
   hasMultiPlay: QVTF
   hasFriendRanking: QVTF
   hasGlobalRanking: QVTF

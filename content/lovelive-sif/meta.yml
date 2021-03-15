@@ -24,6 +24,7 @@ scorePolicy:
 socialPolicy:
   hasSocial: true
   hasMultiPlay: true
+  hasRateSystem: unknown
   hasFriendRanking: unknown
   hasGlobalRanking: unknown
   hasEventRanking: true

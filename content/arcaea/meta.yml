@@ -31,6 +31,9 @@ scorePolicy:
 socialPolicy:
   hasSocial: true
   hasMultiPlay: false
+  hasRateSystem:
+    - true
+    - 即 Potential（简称 PTT）。
   hasFriendRanking: true
   hasGlobalRanking: true
   hasEventRanking: false
