@@ -18,7 +18,7 @@ mapPolicy:
   hasFreeWorkMap: true
   difficultiesRequireSeperateUnlock:
     - true
-    - MASTER 难度的解锁条件：在 EXPERT 难度曲目中取得 7 个或以下 Good。
+    - MASTER 难度的解锁条件：在此曲目的一次 EXPERT 难度游玩中取得 7 个或以下 Good （及以下）评价。
 scorePolicy:
   comboDependent: true
   nonPlayerDependent: true
