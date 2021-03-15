@@ -1,0 +1,31 @@
+name: 世界计划：多彩舞台
+originalName: Project SEKAI COLORFUL STAGE! feat. Hatsune Miku
+aka:
+  - pjsk
+  - 世界计划
+developer: SEGA / Colorful Palette / CFM
+platform:
+  android: com.sega.pjsekai
+  ios: https://apps.apple.com/jp/app/id1489932710
+website: https://pjsekai.sega.jp/
+gameplayPolicy:
+  hasFail: true
+  gameDimension: 1
+  linearTrack: true
+  hasFlick: true
+mapPolicy:
+  hasPaidMap: false
+  hasFreeWorkMap: true
+  difficultiesRequireSeperateUnlock:
+    - true
+    - MASTER 难度的解锁条件：在 EXPERT 难度曲目中取得 7 个或以下 Good。
+scorePolicy:
+  comboDependent: true
+  nonPlayerDependent: true
+  flatMaxScore: false
+socialPolicy:
+  hasSocial: true
+  hasMultiPlay: true
+  hasFriendRanking: false
+  hasGlobalRanking: false
+  hasEventRanking: true

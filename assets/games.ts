@@ -17,6 +17,10 @@ const games: GameEntry[] = [
     slug: 'lovelive-sif',
     name: 'Love Live! 学园偶像祭',
   },
+  {
+    slug: 'sekai',
+    name: '世界计划 多彩舞台',
+  },
 ]
 
 export default games
