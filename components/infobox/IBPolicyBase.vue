@@ -34,7 +34,12 @@ export default class IBPolicyBase<T> extends Vue {
   nonQVLList: string[] = []
 
   get cnContent() {
-    return Object.entries(this.meta).map(([key, val], _) => {
+    const keyOrder = Object.keys(this.policyNames)
+    return Object.entries(this.meta).sort((a, b) => {
+      const orderA = keyOrder.indexOf(a[0]) > 0 ? keyOrder.indexOf(a[0]) : keyOrder.length
+      const orderB = keyOrder.indexOf(b[0]) > 0 ? keyOrder.indexOf(a[0]) : keyOrder.length
+      return orderA - orderB
+    }).map(([key, val], _) => {
       const qvResponse = analyzeQVL(val as QuadValuedLogic)
       return {
         key,
