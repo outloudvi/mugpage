@@ -21,7 +21,9 @@ mapPolicy:
   hasLimitedFreeMap:
     - true
     - 指 World Extend 曲包。
-  difficultiesRequireSeperateUnlock: true
+  difficultiesRequireSeperateUnlock:
+    - true
+    - 不同难度谱面没有解锁先后顺序限制。
 scorePolicy:
   comboDependent: false
   nonPlayerDependent: false
