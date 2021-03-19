@@ -21,6 +21,10 @@ const games: GameEntry[] = [
     slug: 'sekai',
     name: '世界计划 多彩舞台',
   },
+  {
+    slug: 'hanipure',
+    name: 'HoneyWorks Premium Live',
+  },
 ]
 
 export default games

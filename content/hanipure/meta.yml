@@ -1,0 +1,22 @@
+name: HoneyWorks Premium Live
+aka:
+  - ハニプレ
+platform:
+  android: jp.aktsk.honeyworkspremiumlive
+  ios: https://apps.apple.com/jp/app/id1518532415
+developer: Akatsuki
+website: https://honeyworks-game.com/
+gameplayPolicy:
+  hasFail: true
+  gameDimension: 1
+  trackCount: 6
+  linearTrack: true
+  hasFlick: true
+mapPolicy:
+  hasFreeWorkMap: true
+  hasPaidMap: false
+  difficultiesRequireSeperateUnlock: false
+scorePolicy:
+  comboDependent: unknown
+  nonPlayerDependent: true
+  flatMaxScore: false
