@@ -1,6 +1,7 @@
 name: Arcaea
 developer: Lowiro
 tagline: 创新立体节奏游戏
+releasedAt: 2017/3/8
 platform:
   android: moe.low.arc
   ios: https://apps.apple.com/us/app/arcaea/id1205999125

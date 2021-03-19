@@ -6,6 +6,7 @@ platform:
   ios: https://apps.apple.com/jp/app/id1518532415
 developer: Akatsuki
 website: https://honeyworks-game.com/
+releasedAt: 2020/11/18
 gameplayPolicy:
   hasFail: true
   gameDimension: 1

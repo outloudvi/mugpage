@@ -2,6 +2,7 @@ name: D4DJ Groovy Mix
 aka:
   - グルミク
 developer: Bushimo
+releasedAt: 2020/10/25
 platform:
   android: com.bushiroad.d4dj
   ios: https://apps.apple.com/jp/app/id1490381755

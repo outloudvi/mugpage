@@ -62,6 +62,7 @@ export interface GameMeta {
   developer?: string
   tagline?: string
   aka?: string[]
+  releasedAt?: string
   platform?: Record<GamePlatform, string>
   website?: string
   gameplayPolicy?: GameplayPolicy

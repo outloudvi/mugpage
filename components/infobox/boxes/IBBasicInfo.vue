@@ -21,6 +21,7 @@
         <div class="mb-2">
           <p v-if="meta.originalName">原名: {{ meta.originalName }}</p>
           <p v-if="meta.aka">别名: {{ meta.aka.join(' / ') }}</p>
+          <p v-if="meta.releasedAt">发布时间: {{ meta.releasedAt }}</p>
         </div>
         <div v-if="meta.platform" id="appStoreLinks">
           <a
