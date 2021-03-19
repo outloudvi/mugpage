@@ -43,7 +43,7 @@ export default class IBPolicyBase<T> extends Vue {
       return orderA - orderB
     }).map(([key, val], _) => {
       const qvResponse = analyzeQVL(val as QuadValuedLogic)
-      const value = this.policyValueMapping[key as keyof T] ? (this.policyValueMapping[key as keyof T] as Record<string, any>)[String(qvResponse.value)] : qvResponse.value
+      const value = this.policyValueMapping[key as keyof T] ? this.policyValueMapping[key as keyof T]?.[String(qvResponse.value)] : qvResponse.value
       return {
         key,
         label: this.policyNames[key as keyof T],
