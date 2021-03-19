@@ -35,6 +35,7 @@ export default {
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/stylelint-module',
+    '~/modules/list',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules

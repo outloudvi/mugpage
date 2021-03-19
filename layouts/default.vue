@@ -44,8 +44,6 @@
 </template>
 
 <script>
-import games from '@/assets/games'
-
 export default {
   data() {
     return {
@@ -56,8 +54,15 @@ export default {
           to: { name: 'index' },
         },
       ],
-      games: games.sort((a, b) => a.slug > b.slug),
+      games: [],
     }
+  },
+  mounted() {
+    fetch('/_nuxt/games.json')
+      .then((x) => x.json())
+      .then((x) => {
+        this.games = x
+      })
   },
 }
 </script>
