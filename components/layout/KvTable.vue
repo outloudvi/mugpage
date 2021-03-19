@@ -114,7 +114,7 @@ export default class Infobox extends Vue {
   position: relative;
 
   @media screen and (min-width: 770px) {
-    width: 50px;
+    width: 65px;
   }
 }
 </style>
@@ -131,7 +131,7 @@ export default class Infobox extends Vue {
   align-items: center;
 
   @media screen and (min-width: 770px) {
-    width: 50px;
+    width: 65px;
   }
 
   &.clickable:hover {
