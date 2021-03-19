@@ -28,6 +28,7 @@ export interface GameplayPolicy {
   gameDimension?: QVNumber
   trackCount?: QVNumber
   linearTrack?: QVTF
+  hasSlideEndCheck?: QVTF
   hasFlick?: QVLUnknown | QV<false | 'side' | 'top' | 'both' | 'any'>
 }
 

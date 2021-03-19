@@ -14,6 +14,7 @@ gameplayPolicy:
     - 这里包含了两侧的音轨。
   linearTrack: true
   hasFlick: top
+  hasSlideEndCheck: false
 mapPolicy:
   hasPaidMap: false
   hasFreeWorkMap: true

@@ -13,6 +13,7 @@ gameplayPolicy:
   gameDimension: 1
   linearTrack: true
   hasFlick: top
+  hasSlideEndCheck: true
 mapPolicy:
   hasPaidMap: false
   hasFreeWorkMap: true

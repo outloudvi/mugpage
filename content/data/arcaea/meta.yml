@@ -13,6 +13,7 @@ gameplayPolicy:
   trackCount: 4
   linearTrack: true
   hasFlick: false
+  hasSlideEndCheck: false
 mapPolicy:
   hasPaidMap: true
   hasFreeWorkMap: true

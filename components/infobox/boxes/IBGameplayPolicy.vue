@@ -33,6 +33,11 @@ export default class Infobox extends mixins<IBPolicyBase<GameplayPolicy>>(IBPoli
     trackCount: "轨道数量",
     linearTrack: "线性轨道",
     hasFlick: "包含滑键",
+    hasSlideEndCheck: "包含尾判"
+  }
+
+  policyDocs = {
+    hasSlideEndCheck: "指长条 note 的结尾松开判定。"
   }
 }
 </script>
