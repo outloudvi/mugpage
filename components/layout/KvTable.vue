@@ -6,7 +6,7 @@
     ref="bTable"
     :show-detail-icon="false"
   >
-    <b-table-column v-slot="props" field="key" label="项目">
+    <b-table-column v-slot="props" field="key" label="项">
       <a
         @click="showDetails(props, props.row, false)"
         v-if="tableDocs[props.row.key]"
@@ -23,7 +23,7 @@
       cell-class="tableColumn"
       v-slot="props"
       field="value"
-      label="状态"
+      label="值"
       centered
     >
       <div
@@ -116,6 +116,10 @@ export default class Infobox extends Vue {
   @media screen and (min-width: 770px) {
     width: 65px;
   }
+}
+
+.b-table td::before {
+  visibility: hidden;
 }
 </style>
 
