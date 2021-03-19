@@ -12,7 +12,7 @@ gameplayPolicy:
   hasFail: true
   gameDimension: 1
   linearTrack: true
-  hasFlick: true
+  hasFlick: top
 mapPolicy:
   hasPaidMap: false
   hasFreeWorkMap: true

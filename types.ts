@@ -28,7 +28,7 @@ export interface GameplayPolicy {
   gameDimension?: QVNumber
   trackCount?: QVNumber
   linearTrack?: QVTF
-  hasFlick?: QVTF
+  hasFlick?: QVLUnknown | QV<false | 'side' | 'top' | 'both' | 'any'>
 }
 
 export interface ScorePolicy {

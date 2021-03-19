@@ -14,7 +14,18 @@ export default class Infobox extends mixins<IBPolicyBase<GameplayPolicy>>(IBPoli
   nonQVLList = [
     'gameDimension',
     'trackCount',
+    'hasFlick'
   ]
+
+  policyValueMapping = {
+    hasFlick: {
+      'side': "侧向",
+      "top": "正向",
+      "both": "正向/侧向",
+      "any": "任意方向",
+      "false": "否"
+    }
+  }
 
   policyNames = {
     hasFail: "游玩可能失败",

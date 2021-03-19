@@ -33,6 +33,8 @@ export default class IBPolicyBase<T> extends Vue {
 
   nonQVLList: string[] = []
 
+  policyValueMapping: Partial<Record<keyof T, Record<string, any>>> = {}
+
   get cnContent() {
     const keyOrder = Object.keys(this.policyNames)
     return Object.entries(this.meta).sort((a, b) => {
@@ -41,10 +43,11 @@ export default class IBPolicyBase<T> extends Vue {
       return orderA - orderB
     }).map(([key, val], _) => {
       const qvResponse = analyzeQVL(val as QuadValuedLogic)
+      const value = this.policyValueMapping[key as keyof T] ? (this.policyValueMapping[key as keyof T] as Record<string, any>)[String(qvResponse.value)] : qvResponse.value
       return {
         key,
         label: this.policyNames[key as keyof T],
-        value: qvResponse.value,
+        value,
         comment: qvResponse.comment,
         nonQVL: this.nonQVLList.includes(key)
       }
