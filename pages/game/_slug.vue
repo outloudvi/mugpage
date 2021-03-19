@@ -20,8 +20,8 @@ export default Vue.extend({
   components: { Infobox },
   async asyncData({ $content, params }) {
     const slug = params.slug
-    const meta = await $content(`${slug}/meta`).fetch()
-    const text = await $content(`${slug}/index`).fetch()
+    const meta = await $content(`data/${slug}/meta`).fetch()
+    const text = await $content(`data/${slug}/index`).fetch()
     return { meta, text }
   },
   head() {
