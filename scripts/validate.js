@@ -3,6 +3,8 @@ const yaml = require('js-yaml')
 const Ajv = require('ajv') // note it's still ajv@6 due to schema-utils
 const ajv = new Ajv({ allErrors: true })
 
+const basedir = 'content/data'
+
 function main() {
   if (!fs.existsSync('.generated/meta.schema.json')) {
     console.error(
@@ -14,14 +16,14 @@ function main() {
     fs.readFileSync('.generated/meta.schema.json', 'utf-8')
   )
   const validate = ajv.compile(schema)
-  const dirs = fs.readdirSync('content/')
+  const dirs = fs.readdirSync(basedir)
 
   let err = 0
 
   console.log('[INFO] Checking meta.yml...')
   for (const dir of dirs) {
-    if (!fs.lstatSync(`content/${dir}`).isDirectory()) continue
-    const filename = `content/${dir}/meta.yml`
+    if (!fs.lstatSync(`${basedir}/${dir}`).isDirectory()) continue
+    const filename = `${basedir}/${dir}/meta.yml`
     const base = yaml.load(fs.readFileSync(filename, 'utf-8'))
     const valid = validate(base)
     if (valid) {
