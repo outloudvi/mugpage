@@ -5,6 +5,7 @@
 * Wiki：[project-imas.com wiki](https://www.project-imas.com/wiki/Main_Page)
 * 人物数据：[cgdex](https://cgdex.project-imas.com/)
 * [Aidoru.info](https://aidoru.info/)
+* [Gamerch 的 CGSS wiki](https://imascg-slstage-wiki.gamerch.com/) （附谱面图）
 * [歌曲解锁指南](https://cg-starlight-stage.tumblr.com/songs) （不再更新）
 
 ## 相关链接
