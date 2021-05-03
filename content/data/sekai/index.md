@@ -3,4 +3,6 @@
 ## 相关链接
 
 * [官方站点](https://pjsekai.sega.jp/)
-* [Project SEKAI wiki](https://projectsekai.fandom.com/wiki/Project_SEKAI_COLORFUL_STAGE!) （非官方）
+* [Project SEKAI wiki](https://projectsekai.fandom.com/wiki/Project_SEKAI_COLORFUL_STAGE!)
+* [Sekai Viewer](https://sekai.best/)
+* [pjsek.ai](https://pjsek.ai/)
