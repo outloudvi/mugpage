@@ -6,6 +6,7 @@
 * 人物数据：[cgdex](https://cgdex.project-imas.com/)
 * [Aidoru.info](https://aidoru.info/)
 * [Gamerch 的 CGSS wiki](https://imascg-slstage-wiki.gamerch.com/) （附谱面图）
+* [根据封面、属性、各难度 Lv，或 note 数查找曲目](https://cgss.fandom.com/zh/wiki/%E6%AD%8C%E6%9B%B2%E5%88%97%E8%A1%A8) （不过并不完整）
 * [截至 2017 年 6 月 30 日的曲目全表及解锁条件](https://docs.google.com/spreadsheets/d/102N-osPWVPh83Hi_o9bSn5oxeXc1hNceOHLKv2ClwYM/edit)
 * [歌曲解锁指南](https://cg-starlight-stage.tumblr.com/songs) （不再更新）
 
