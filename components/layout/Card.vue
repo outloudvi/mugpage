@@ -63,6 +63,10 @@ export default class Infobox extends Vue {
 </script>
 
 <style lang="scss" scoped>
+.card {
+  overflow: hidden;
+}
+
 .card-content {
   max-height: 9999px;
   transition: all 0.2s ease;
