@@ -1,0 +1,41 @@
+name: 偶像大师百万现场 剧场时光
+originalName: アイドルマスター ミリオンライブ！ シアターデイズ
+aka:
+  - MLTD
+  - ミレシタ
+  - 麻辣土豆
+developer: BANDAI NAMCO
+releasedAt: 2017/6/29
+platform:
+  android: com.bandainamcoent.imas_millionlive_theaterdays
+  ios: https://apps.apple.com/jp/app/id1238569156
+website: https://millionlive.idolmaster.jp/theaterdays/
+gameplayPolicy:
+  hasFail: true
+  gameDimension: 1
+  trackCount:
+    - 6
+    - 不同模式下轨道数不同。在 2M/4M 模式下为 2/4 轨，其它模式为 6 轨。
+  linearTrack:
+    - false
+    - 变速是 MLTD 谱面常态。
+  hasFlick: both
+  hasSlideEndCheck: true
+mapPolicy:
+  hasPaidMap: false
+  difficultiesRequireSeperateUnlock:
+    - true
+    - 6M 谱面需要在完成其它难度一次后解锁。
+scorePolicy:
+  comboDependent: true
+  nonPlayerDependent: true
+  flatMaxScore: false
+socialPolicy:
+  hasSocial: true
+  hasMultiPlay: true
+  hasRateSystem:
+    - true
+    - 即 Producer Rating Point（简称 PRP）。
+  hasFriendRanking: unknown
+  hasGlobalRanking: unknown
+  hasEventRanking: unknown

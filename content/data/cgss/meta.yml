@@ -12,27 +12,28 @@ website: https://cinderella.idolmaster.jp/sl-stage/
 gameplayPolicy:
   hasFail: true
   gameDimension: 1
-  trackCount: 5
+  trackCount:
+    - 5
+    - 在 Smart 竖屏模式下为单轨。
   linearTrack: false
   hasFlick: side
   hasSlideEndCheck: true
 mapPolicy:
-  hasPaidMap: unknown
+  hasPaidMap: false
   hasFreeWorkMap: true
-  hasLimitedPurchaseMap: unknown
-  hasLimitedExpiringMap: unknown
-  hasLimitedFreeMap: unknown
-  difficultiesRequireSeperateUnlock: true
+  difficultiesRequireSeperateUnlock:
+    - true
+    - MASTER 谱面需要在完成其它难度一次后解锁。
 scorePolicy:
-  comboDependent: unknown
+  comboDependent: true
   nonPlayerDependent: true
   flatMaxScore: false
 socialPolicy:
   hasSocial: true
-  hasMultiPlay: true
+  hasMultiPlay: unknown
   hasRateSystem:
     - true
-    - 即 Producer Rating Point（简称 PRP）。
+    - 即 LP。
   hasFriendRanking: unknown
   hasGlobalRanking: unknown
   hasEventRanking: unknown
