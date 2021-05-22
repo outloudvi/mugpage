@@ -22,7 +22,9 @@ gameplayPolicy:
   hasFlick: both
   hasSlideEndCheck: true
 mapPolicy:
-  hasPaidMap: false
+  hasPaidMap:
+    - true
+    - 部分歌曲需要使用付费钻石解锁，每曲 60 有偿钻石。60 有偿钻石的购买价格约 120 JPY。
   difficultiesRequireSeperateUnlock:
     - true
     - 6M 谱面需要在完成其它难度一次后解锁。
