@@ -21,6 +21,7 @@ MLTD 的 Miss 判定和 Combo 判定极其宽容。然而，纵向滑键的存�
 
 ## 信息站点
 * Wiki：[project-imas.com wiki](https://www.project-imas.com/wiki/Main_Page)
+* 卡片/活动信息站点：[Fantasia](https://mltd.matsurihi.me/)
 * 对 MLTD 正体中文服的[基本介绍](https://www.ptt.cc/bbs/C_Chat/M.1567443473.A.AC5.html)，也适用于其它服务器 （正体中文）
 * 对 MLTD [基础功能](https://docs.google.com/document/d/1_5VBweG1RZ_7Pl5GBkA2_OxLH6MwYKZc4g_5JECtbmA/edit)及[组队](https://docs.google.com/document/d/1E6U-IdJEti5Sk2Ej4RT8sXZLFcsPB8EceIFVGqhJ0DM/edit)的介绍，也适用于其它服务器 （正体中文）
 * [r/Theaterdays 的 wiki](https://www.reddit.com/r/TheaterDays/wiki/index)
